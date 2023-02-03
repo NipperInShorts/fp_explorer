@@ -7218,7 +7218,7 @@ GameObject:
   - component: {fileID: 796885245}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7231,7 +7231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796885243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34, y: 1.17, z: -0.338}
+  m_LocalPosition: {x: 0.34, y: 1.07, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9965,6 +9965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037994638}
   - component: {fileID: 1037994639}
+  - component: {fileID: 1037994640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9980,7 +9981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037994637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.332, y: 1.72, z: -65.626}
+  m_LocalPosition: {x: 29.332, y: 1.37, z: -65.626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10015,10 +10016,27 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard and Mouse
   m_DefaultActionMap: Gameplay Controls
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 796885246}
+--- !u!114 &1037994640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037994637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c539cf57fd2954713b7e3019d20530ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 796885246}
+  deltaX: 0
+  deltaY: 0
+  playerRotX: 0
+  playerRotY: 0
 --- !u!1 &1075135687
 GameObject:
   m_ObjectHideFlags: 0
