@@ -16,6 +16,8 @@ public class FirstPersonCamera : MonoBehaviour
     public float playerRotX; // x axis in degrees
     public float playerRotY; // y axis in degrees
 
+    public float sensitivity = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,8 @@ public class FirstPersonCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerRotY += deltaX * 0.7f;
-        playerRotX -= deltaY * 0.7f;
+        playerRotY += deltaX * sensitivity * Time.deltaTime;
+        playerRotX -= deltaY * sensitivity * Time.deltaTime;
 
         // clamp on x axis
         playerRotX = Mathf.Clamp(playerRotX, -90f, 90f);

@@ -11,16 +11,20 @@ public class FirstPersonMovement : MonoBehaviour
     public Vector3 direction;
     public float speed;
 
+    Rigidbody rbPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        rbPlayer = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        //transform.Translate(direction * speed * Time.deltaTime);
+        Vector3 localDirection = transform.TransformDirection(direction);
+        rbPlayer.MovePosition(rbPlayer.position + (localDirection * speed * Time.deltaTime));
     }
 
     public void OnPlayerMove(InputValue inputValue) {
@@ -28,5 +32,7 @@ public class FirstPersonMovement : MonoBehaviour
 
         direction.x = inputVector.x;
         direction.z = inputVector.y;
+
+        direction.y = 0f;
     }
 }
